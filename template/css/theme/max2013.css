@@ -11,10 +11,24 @@
   font-style: normal; }
 
 @font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-it-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: italid; }
+
+@font-face {
   font-family: 'Source San Pro Black';
   src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot");
   src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-black-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack") format("svg");
   font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
   font-style: normal; }
 
 /*********************************************
@@ -141,30 +155,68 @@ body {
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
+.reveal section section:after {
+  content: "";
+  background: none; }
+.reveal section:after {
+  margin-top: 10px;
+  content: "Adobe Systems Incorporated. All Rights Reserved.";
+  display: block;
+  font-size: .7rem;
+  background-image: url("max2013/adobelogo_black.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+  line-height: 2rem;
+  text-align: left; }
 .reveal h1 {
-  font-size: 1.5em; }
-
+  font-size: 3rem;
+  text-align: left; }
 .reveal h2 {
-  font-size: .8em;
+  font-size: 1.5rem;
   color: #999; }
-
-.titleslide {
-  border: 1px solid red; }
-  .titleslide hgroup {
-    padding: 0.5em 1em;
-    background-color: #FFFFFF;
-    text-align: left; }
-  .titleslide h1 {
-    font-size: 1.1em; }
-  .titleslide h2 {
-    font-size: .7em; }
-
 .reveal img.transparent {
   border: none;
   background: none;
   box-shadow: none; }
+.reveal ul {
+  width: 100%; }
+  .reveal ul li {
+    font-size: 2.2rem; }
+    .reveal ul li ul li {
+      font-size: 1.8rem; }
+      .reveal ul li ul li ul li {
+        font-size: 1.3rem; }
+.reveal code {
+  font-family: "Source Code Pro"; }
+.reveal .content {
+  padding: 25px 10px;
+  height: 500px; }
+.reveal .content-with-bg {
+  padding: 25px 10px;
+  background-color: #FFFFFF;
+  height: 500px; }
+.reveal .titleslide hgroup {
+  padding: 0.5em 1em;
+  background-color: #FFFFFF;
+  text-align: left; }
+.reveal .titleslide h1 {
+  font-size: 1.1em; }
+.reveal .titleslide h2 {
+  font-size: .7em; }
+.reveal .titleslide:after {
+  content: ""; }
 
 .adobelogo {
   left: 17%;
   position: absolute;
   display: none; }
+
+#bird {
+  position: absolute;
+  width: 400px;
+  bottom: -100px;
+  right: -200px; }
+
+#logo {
+  margin-top: -50px; }

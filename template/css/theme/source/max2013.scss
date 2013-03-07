@@ -27,6 +27,19 @@
 
 // Include theme-specific fonts
 @font-face {
+	font-family: 'Source San Pro';
+	src: url('../../lib/font/adobe/sourcesanspro-it-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
+	font-style: italid;
+}
+
+// Include theme-specific fonts
+@font-face {
 	font-family: 'Source San Pro Black';
 	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot');
 	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
@@ -35,6 +48,19 @@
 		 url('../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack') format('svg');
 
 	font-weight: bold;
+	font-style: normal;
+}
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source Code Pro';
+	src: url('../../lib/font/adobe/sourcecodepro-regular-webfont.eot');
+	src: url('../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -68,38 +94,104 @@ $headingTextTransform: none;
 @import "../template/theme";
 // ---------------------------------------------
 
-.reveal h1{
-	font-size: 1.5em;
-}
 
-.reveal h2{
-	font-size: .8em;
-	color: #999;
-}
 
-.titleslide {
-	border: 1px solid red;
-	hgroup{
-		padding: .5em 1em;
-		background-color: #FFFFFF;
-		text-align: left;
+
+.reveal {
+	section{
+		section{
+			&:after{
+				content: "";
+				background: none;
+			}
+		}
+
+		&:after{
+			margin-top: 10px;
+			content: "Adobe Systems Incorporated. All Rights Reserved.";
+			display: block;
+			font-size: .7rem;
+			background-image: url("max2013/adobelogo_black.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right top;
+			line-height: 2rem;
+			text-align: left;
+		}
+		
 	}
 
 	h1{
-		font-size: 1.1em;
+		font-size: 3rem;
+		text-align: left;
 	}
-
 	h2{
-		font-size: .7em;
+		font-size: 1.5rem;
+		color: #999;
+	}
+
+	img.transparent{
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+	ul{
+		width: 100%;
+		li{
+			font-size: 2.2rem;
+			ul{
+				li{
+					font-size: 1.8rem;
+					ul{
+						li{
+							font-size: 1.3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	code{
+		font-family: "Source Code Pro";
+	}
+
+	
+
+	.content{
+		padding: 25px 10px;
+		height: 500px;
+	}
+
+	.content-with-bg{
+		padding: 25px 10px;
+		background-color: #FFFFFF;
+		height: 500px;
+	}
+
+	.titleslide {
+		hgroup{
+			padding: .5em 1em;
+			background-color: #FFFFFF;
+			text-align: left;
+		}
+
+		h1{
+			font-size: 1.1em;
+		}
+
+		h2{
+			font-size: .7em;
+		}
+
+		&:after{
+			content: "";
+			
+		}
+
 	}
 
 
-}
-
-.reveal img.transparent{
-	border: none;
-	background: none;
-	box-shadow: none;
 }
 
 .adobelogo{
@@ -107,3 +199,14 @@ $headingTextTransform: none;
 	position: absolute;
 	display:none;
 }
+
+#bird{
+	position: absolute;
+	width: 400px;
+	bottom: -100px;
+	right: -200px;
+}
+#logo{
+	margin-top: -50px;
+}
+
