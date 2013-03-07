@@ -1,0 +1,109 @@
+/**
+ * Beige theme for reveal.js.
+ * 
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source San Pro';
+	src: url('../../lib/font/adobe/sourcesanspro-regular-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-regular-webfont.svg#SourceCodePro') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Source San Pro Black';
+	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot');
+	src: url('../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.woff') format('woff'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.ttf') format('truetype'),
+		 url('../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack') format('svg');
+
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingColor: #333;
+$headingTextShadow: none;
+$backgroundColor: #f7f3de;
+$linkColor: #8b743d;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$heading1TextShadow: none;
+
+$mainFont: "Adobe Clean", "Source Sans Pro";
+$headingFont: "Adobe Clean", "Source San Pro Black";
+$mainFontSize: 36px;
+$headingTextTransform: none;
+
+
+// Background generator
+@mixin bodyBackground() {
+	background: url('max2013/bg.jpg');
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal h1{
+	font-size: 1.5em;
+}
+
+.reveal h2{
+	font-size: .8em;
+	color: #999;
+}
+
+.titleslide {
+	border: 1px solid red;
+	hgroup{
+		padding: .5em 1em;
+		background-color: #FFFFFF;
+		text-align: left;
+	}
+
+	h1{
+		font-size: 1.1em;
+	}
+
+	h2{
+		font-size: .7em;
+	}
+
+
+}
+
+.reveal img.transparent{
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+
+.adobelogo{
+	left: 17%;
+	position: absolute;
+	display:none;
+}

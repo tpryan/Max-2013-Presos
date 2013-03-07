@@ -33,16 +33,16 @@
 	<body>
 
 		<div class="reveal">
-
+			<img src="css/theme/max2013/adobe.gif" class="adobelogo" id="adobelogo" />
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+				<section class="titleslide">
+					<hgroup>
+						<h1>Adobe Presentation</h1>
+						<h2>Speaker Name | Title</h2>
+					</hgroup>
+					<img src="css/theme/max2013/logo.png" class="transparent" />
 				</section>
 
 				<section>
@@ -355,8 +355,9 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+				margin: 0,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				theme: 'max2013', // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
@@ -371,6 +372,31 @@ function linkify( selector ) {
 				]
 			});
 
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    if (isTitleSlide(event)){
+			    	document.getElementById('adobelogo').style.display = 'inline-block';
+			    }
+			    else{
+			    	document.getElementById('adobelogo').style.display = 'none';
+			    }
+			} );
+
+			Reveal.addEventListener( 'ready', function( event ) {
+			   if (isTitleSlide(event)){
+			    	document.getElementById('adobelogo').style.display = 'inline-block';
+			    }
+			    else{
+			    	document.getElementById('adobelogo').style.display = 'none';
+			    }
+			} );
+
+
+			function isTitleSlide(event){
+				if (event.currentSlide.classList.contains("titleslide") > 0){
+			    	return true;
+			    }
+			    return false;
+			}
 		</script>
 
 	</body>
