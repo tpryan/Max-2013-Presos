@@ -155,9 +155,6 @@ body {
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
-.reveal section section:after {
-  content: "";
-  background: none; }
 .reveal section:after {
   margin-top: 10px;
   content: "Adobe Systems Incorporated. All Rights Reserved.";
@@ -169,6 +166,9 @@ body {
   background-position: right top;
   line-height: 2rem;
   text-align: left; }
+.reveal section.stack:after {
+  content: "";
+  background: none; }
 .reveal h1 {
   font-size: 3rem;
   text-align: left; }

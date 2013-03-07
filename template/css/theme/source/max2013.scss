@@ -98,13 +98,10 @@ $headingTextTransform: none;
 
 
 .reveal {
+	
 	section{
-		section{
-			&:after{
-				content: "";
-				background: none;
-			}
-		}
+
+
 
 		&:after{
 			margin-top: 10px;
@@ -117,6 +114,11 @@ $headingTextTransform: none;
 			background-position: right top;
 			line-height: 2rem;
 			text-align: left;
+		}
+		&.stack:after{
+			content: "";
+			background: none;
+
 		}
 		
 	}

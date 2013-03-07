@@ -288,6 +288,7 @@ function linkify( selector ) {
 			});
 
 			Reveal.addEventListener( 'slidechanged', function( event ) {
+				console.log(event);
 			    if (isTitleSlide(event)){
 			    	document.getElementById('adobelogo').style.display = 'inline-block';
 			    }
