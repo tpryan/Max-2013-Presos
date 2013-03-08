@@ -11,11 +11,49 @@
    beyond the edge of the printed page, and prevents
    unnecessary background images from printing */
 
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-it-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-it-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: italid; }
+
+@font-face {
+  font-family: 'Source San Pro Black';
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-black-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-black-webfont.svg#SourceCodeProBlack") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot");
+  src: url("../../lib/font/adobe/sourcecodepro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcecodepro-regular-webfont.svg#SourceCodePro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source San Pro';
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot");
+  src: url("../../lib/font/adobe/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.woff") format("woff"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../../lib/font/adobe/sourcesanspro-bold-webfont.svg#SourceCodePro") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+
 * {
 	-webkit-print-color-adjust: exact;
 }
 
 body {
+	font-family: "Adobe Clean", "Source Sans Pro";
 	font-size: 18pt;
 	width: auto;
 	height: auto;
@@ -161,4 +199,12 @@ ul, ol, div, p {
 }
 .reveal small a {
 	font-size: 16pt !important;
+}
+
+.reveal .titleslide hgroup{
+	box-shadow: none;
+}
+
+.reveal .content-with-bg {
+	box-shadow: none;
 }
