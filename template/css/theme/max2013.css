@@ -237,7 +237,8 @@ body {
 .reveal .titleslide hgroup {
   padding: 0.5em 1em;
   background-color: #FFFFFF;
-  text-align: left; }
+  text-align: left;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
 .reveal .titleslide h1 {
   font-size: 1.1em; }
 .reveal .titleslide h2 {
